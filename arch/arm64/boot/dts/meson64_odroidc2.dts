@@ -800,14 +800,21 @@
 };
 
 &i2c_a {
-	status = "okay";
+        status = "okay";
+        /* DS1307 I2C RTC */
+        rtc0: rtc@68 {
+                compatible = "maxim,ds1307";
+                reg = <0x68>;
+                status = "okay";
+        };
 
-	/* Hardkernel I2C RTC */
-	pcf8563: pcf8563@51	{
-		compatible = "nxp,pcf8563";
-		reg = <0x51>;
-		#clock-cells = <0>;
-	};
+        /* Hardkernel I2C RTC */
+        /* pcf8563: pcf8563@51  {
+                compatible = "nxp,pcf8563";
+                reg = <0x51>;
+                #clock-cells = <0>;
+        };
+        */
 };
 
 &i2c_b {
