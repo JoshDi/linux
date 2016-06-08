@@ -353,7 +353,7 @@ static struct hdmitx_clk hdmitx_clk[] = {
 	{HDMIV_1440x900p60hz, 24000, 1067000, 106700, 106700, -1, 106700},
 	{HDMIV_1600x900p60hz, 24000, 1080000, 108000, 108000, -1, 108000},
 	{HDMIV_1680x1050p60hz, 24000, 1463600, 146360, 146360, -1, 146360},
-	{HDMIV_1920x1200p60hz, 24000, 1936200, 193620, 193620, -1, 193620},
+	{HDMIV_1920x1200p60hz, 24000, 1540000, 154000, 154000, -1, 154000},
 	{HDMIV_2560x1440p60hz, 24000, 2415000, 241500, 241500, -1, 241500},
 	{HDMIV_2560x1600p60hz, 24000, 2685000, 268500, 268500, -1, 268500},
 	{HDMIV_2560x1080p60hz, 24000, 1855800, 185580, 185580, -1, 185580},
@@ -1511,14 +1511,14 @@ static void hdmi_tvenc_set(struct hdmitx_vidpara *param)
 		PIXEL_REPEAT_HDMI   = 0;
 		ACTIVE_PIXELS       = 1920;
 		ACTIVE_LINES        = 1200;
-		LINES_F0            = 1245;
-		LINES_F1            = 1245;
-		FRONT_PORCH         = 136;
-		HSYNC_PIXELS        = 200;
-		BACK_PORCH          = 336;
+		LINES_F0            = 1235;
+		LINES_F1            = 1235;
+		FRONT_PORCH         = 48;
+		HSYNC_PIXELS        = 32;
+		BACK_PORCH          = 80;
 		EOF_LINES           = 3;
 		VSYNC_LINES         = 6;
-		SOF_LINES           = 36;
+		SOF_LINES           = 26;
 		break;
 	case HDMIV_2560x1440p60hz:
 		INTERLACE_MODE      = 0;

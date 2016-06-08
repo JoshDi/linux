@@ -1080,7 +1080,7 @@ static struct vinfo_s tv_info[] = {
 		.aspect_ratio_den  = 5,
 		.sync_duration_num = 60,
 		.sync_duration_den = 1,
-		.video_clk         = 193250000,
+		.video_clk         = 154000000,
 	},
 	{
 		.name              = "2560x1440p60hz",
