@@ -61,7 +61,7 @@
 
 		fb_reserved:linux,meson-fb {
 			compatible = "amlogic, fb-memory";
-			size = <0x0 0x800000>;
+			size = <0x0 0x8000000>;
 			no-map;
 		};
 
@@ -88,24 +88,24 @@
 		codec_mm_cma:linux,codec_mm_cma {
 			compatible = "shared-dma-pool";
 			reusable;
-			size = <0x0 0xbc000>;
-			alignment = <0x0 0x4000>;
+			size = <0x0 0xbc00000>;
+			alignment = <0x0 0x400000>;
 			linux,contiguous-region;
 		};
 
 		picdec_cma_reserved:linux,picdec {
 			compatible = "shared-dma-pool";
 			reusable;
-			size = <0x0 0x30000>;
-			alignment = <0x0 0x4000>;
+			size = <0x0 0x3000000>;
+			alignment = <0x0 0x400000>;
 			linux,contiguous-region;
 		};
 
 		/* codec shared reserved */
 		codec_mm_reserved:linux,codec_mm_reserved {
 			compatible = "amlogic, codec-mm-reserved";
-			size = <0x0 0x41000>;
-			alignment = <0x0 0x1000>;
+			size = <0x0 0x4100000>;
+			alignment = <0x0 0x100000>;
                         //no-map;
 		};
 	};
@@ -124,11 +124,11 @@
                 interrupts = <0 3 1
                         0 89 1>;
 		interrupt-names = "viu-vsync", "rdma";
-		mem_size = <0x600000 0x10000>; /* fb0/fb1 memory size */
+		mem_size = <0x06000000 0x00100000>; /* fb0/fb1 memory size */
                 vmode = <4>;	/* 720p60hz */
-		scale_mode = <0>;
-                4k2k_fb = <0>;
-		display_size_default = <1024 768 1024 1536 16>;
+		scale_mode = <1>;
+                4k2k_fb = <1>;
+		display_size_default = <1280 720 1280 1440 32>;
 	};
 
 	ge2d {
