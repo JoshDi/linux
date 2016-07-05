@@ -184,6 +184,7 @@ enum hdmi_vic {
 	HDMIV_2560x1440p60hz,
 	HDMIV_2560x1600p60hz,
 	HDMIV_2560x1080p60hz,
+	HDMIV_3440x1440p60hz,
 };
 
 /* Compliance with old definitions */

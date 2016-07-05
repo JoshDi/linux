@@ -451,6 +451,11 @@ static const struct reg_s tvregs_vesa_2560x1080_enc[] = {
 	{MREG_END_MARKER,            0      }
 };
 
+static const struct reg_s tvregs_vesa_3440x1440_enc[] = {
+	{MREG_END_MARKER,            0      }
+};
+
+
 /* Using tvmode as index */
 static struct tvregs_set_t tvregsTab[] = {
 	{TVMODE_480I, tvregs_480i_clk, tvregs_480i_enc},

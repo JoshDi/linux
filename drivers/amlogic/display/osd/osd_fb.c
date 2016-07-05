@@ -414,6 +414,13 @@ static int osd_set_res_bootargs(int index, enum vmode_e mode)
 		fb_def_var[index].yres_virtual = 2160;
 		fb_def_var[index].bits_per_pixel = 32;
 		break;
+	case TVMODE_3440x1440p60hz:
+		fb_def_var[index].xres = 3440;
+		fb_def_var[index].yres = 1440;
+		fb_def_var[index].xres_virtual = 3440;
+		fb_def_var[index].yres_virtual = 2880;
+		fb_def_var[index].bits_per_pixel = 32;
+		break;
 	case VMODE_480P:
 	case VMODE_480I:
 		fb_def_var[index].xres = 720;
@@ -816,13 +823,13 @@ static int osd_ioctl(struct fb_info *info, unsigned int cmd, unsigned long arg)
 		ret = copy_from_user(&osd_dst_axis, argp, 4 * sizeof(s32));
 		break;
 #if defined(CONFIG_ARCH_MESON64_ODROIDC2) && defined(CONFIG_UMP)
-	case GET_UMP_SECURE_ID_BUF1:  
+	case GET_UMP_SECURE_ID_BUF1:
 		return disp_get_ump_secure_id(info, fbdev, arg, 0);
 		break;
 	case GET_UMP_SECURE_ID_BUF2:
 		return disp_get_ump_secure_id(info, fbdev, arg, 1);
 		break;
-#endif	
+#endif
 	default:
 		osd_log_err("command 0x%x not supported (%s)\n",
 				cmd, current->comm);

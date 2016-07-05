@@ -608,6 +608,17 @@ static struct hdmitx_vidpara hdmi_tx_video_params[] = {
 		.ss		= SS_SCAN_UNDER,
 		.sc		= SC_SCALE_HORIZ_VERT,
 	},
+	{
+		.VIC		= HDMIV_3440x1440p60hz,
+		.color_prefer   = COLOR_SPACE_RGB444,
+		.color_depth	= hdmi_color_depth_24B,
+		.bar_info	= B_BAR_VERT_HORIZ,
+		.repeat_time	= NO_REPEAT,
+		.aspect_ratio   = TV_ASPECT_RATIO_16_9,
+		.cc		= CC_ITU709,
+		.ss		= SS_SCAN_UNDER,
+		.sc		= SC_SCALE_HORIZ_VERT,
+	},
 };
 
 static struct hdmitx_vidpara *hdmi_get_video_param(
