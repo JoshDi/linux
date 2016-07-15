@@ -1280,13 +1280,13 @@ void osd_enable_3d_mode_hw(u32 index, u32 enable)
 
 void osd_enable_hw(u32 index, u32 enable)
 {
-	if (index == 0) {
+/*	if (index == 0) {
 		osd_log_info("osd[%d] enable: %d (%s)\n",
 				index, enable, current->comm);
 	} else {
 		osd_log_dbg2("osd[%d] enable: %d (%s)\n",
 				index, enable, current->comm);
-	}
+	} */
 
 	osd_hw.enable[index] = enable;
 	add_to_update_list(index, OSD_ENABLE);
